@@ -1,4 +1,16 @@
-span
+/*
+.carousel .item {
+  height: 250px;
+}
+
+.item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 250px;
+}7*/
+
+.accent
 {
-    color: red;
+    background-color:rgb(25, 25, 25);
 }
