@@ -2,147 +2,192 @@
 <html lang="nl-BE">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>project4</title>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer>
     </script>
-   <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/kaart.css">
+
+  <script src="js/kaart.js" defer></script>
+  <script src="js/jaar.js" defer></script>
 </head>
-<body>
+<body class="bg-dark">
     <header>
-        <nav class="navbar navbar-expand-md navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand text-uppercase fw-bolder" href="index.html">samuel mensah</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+    <nav class="navbar navbar-dark navbar-expand-md accent">
+    <div class="container-fluid">
+        <a class="navbar-brand text-uppercase text-white fw-bolder" href="index.html">samuel&nbsp;mensah</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white active" href="portfolio.html" role="button" aria-current="page" data-bs-toggle="dropdown" aria-expanded="false">Portfolio</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item text-white active" href="homelab.html">homelab</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </header>
+
+    <header>
+    </header>
+
+    <div class="container">
+        <div class="row">
+        <main class="col-md-9">
+        <div class="row">
+            <section id="carouselExampleCaptions" class="carousel slide col-md-9 py-4">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active"><img src="assets/images/ham.jpg" class="d-block w-100" alt="breadboard"></div>
+                    <div class="carousel-item"><img src="assets/images/homeassistant.png" class="d-block w-100" alt="electronica"></div>
+                    <div class="carousel-item"><img src="assets/images/jellyfin.png"  class="d-block w-100" alt="3D-printers"></div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">vorige</span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="portfolio.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Projecten
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="project1.html">Project 1</a>
-                                <a class="dropdown-item" href="project2.html">Project 2</a>
-                                <a class="dropdown-item" href="project3.html">Project 3</a>
-                                <a class="dropdown-item active" aria-current="page" href="project4.html">Project 4</a>
-                                <a class="dropdown-item" href="project5.html">Project 5</a>
-                                <a class="dropdown-item" href="project6.html">Project 6</a>
-                            </div>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    </ul>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">volgende</span>
+                </button>
+            </section>
+        </div>
+
+        <hr class="text-white">
+        <section class="row">
+            <h2 class="text-white fs-4 fw-bold">Waarom dit project?</h2>
+            <p class="text-white">
+                Op school krijg ik het vak besturingsystemen waar dingen zoal hoe computers werken, hoe je software op een computer zet en hoe je een computer beheerd.
+                Ik vondt dit heel inttresant dus heb ik van een kleine kantoor computer een server gemaakt waarop mijn egien cloud opslag, muziek en films host.
+            </p>
+            <h2 class="text-white fs-4 fw-bold">Wat leerde ik door dit project?</h2>
+            <p class="text-white">
+                Tijdens dit project leerde ik hoe ik een server instel voor gebruik in selfhosting en beetje over hoe je een netwerk configureert.
+            </p>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item border-dark">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button text-uppercase fw-bold text-white accent" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">software</button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show text-white" style="background-color: rgb(32, 32, 32);"aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Voor het besturingsystemen gebruik ik linux debian, omdat ik het gebruikte op school.
+                            Voor de opslag cloud gebruik samba, voor muziek en films jellyfin en als thuis automatisathie platform gebruik ik homeassitant. Al deze software is opensource en gratis.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item border-dark">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed text-uppercase fw-bold text-white accent" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">hardware</button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse text-white" style="background-color: rgb(32, 32, 32);" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            De behuizing is een 3d print die ik van het internet heb gedownload en zelf heb geprint. <br>
+                            De computer is een HP ProDesk 400 G1 <br>
+                            De switch is een tp link TL-SG108 <br>
+                            De router is een mikrotik hex s(2025)
+                            en is er nog de optische schijf voor jellyfin, een hardeschijf en een stekkerdoos. 
+
+
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
-    <main>
-        <section class="row mx-3">
-            <fieldset class="col-md-6 g-3">
-                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active"><img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" src="assets/images/electronica.jpg"></div>
-                        <div class="carousel-item"><img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" src="assets/images/printers.jpg"></div>
-                        <div class="carousel-item"><img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" src="assets/images/breadboard.jpg"></div>
-                    </div>
-                </div>
-            </fieldset >
-
-            <fieldset class="row col-md-6 g-3">
-                <legend class="fw-bolder" style="height: min-content;">Project 4<br><p class="fw-light fs-5">29/03/2026</p></legend>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Nobis ipsam facilis aliquid quisquam labore excepturi optio? 
-                    Natus voluptates tempora asperiores nulla voluptate id exercitationem expedita!
-                    Excepturi neque quibusdam, nostrum, aliquid eveniet soluta corporis exercitationem sed ipsa,
-                    maxime cum explicabo fugiat quisquam porro amet deserunt?
-                    Deserunt corporis nemo incidunt quas voluptate.
-                </p>
-            </fieldset>
         </section>
-        <section class="">
-            <p class="text-center py-5 fs-5">
-                Meer Informatie<br>
-                <i class="bi bi-arrow-bar-down text-center fs-1"></i>
-            </p>
+        <hr class="text-white">
 
-            <fieldset class="mx-3">
-                <div class="accordion" id="accordionExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Waarom dit project?
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias dolor ex quisquam rerum? Ducimus eum quam magni culpa rerum ut fugit, cupiditate sed quae nobis maiores aperiam possimus facilis dicta!
-                            </div>
+        <fieldset class="row">
+            <legend class="text-white fw-bold">Andere Projecten</legend>
+            <p class="text-white">Er zijn nog geen andere projcten</p>
+            <!--
+                <article class="shop-item col-12 col-sm-6 col-md-4 mb-3">
+                    <div class="card border-dark">
+                        <img src="assets/images/ham.jpg" class="card-img-top" alt="...">
+                        <div class="card-body accent text-white">
+                            <h5 class="card-title text-uppercase fw-bolder">homelab</h5>
+                            <p class="card-text">Mijn eigen cloud, netflix, spotify en meer!</p>
+                            <a href="homelab.html" class="btn btn-primary">bekijken</a>    
                         </div>
                     </div>
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Software&#47;Hardware
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio nesciunt voluptate enim obcaecati a nemo vero optio quasi dolores quas!
-                            </div>
+                </article>
+                <article class="shop-item col-12 col-sm-6 col-md-4 mb-3">
+                    <div class="card border-dark">
+                        <img src="assets/images/electronica.webp" class="card-img-top" alt="...">
+                        <div class="card-body accent text-white">
+                            <h5 class="card-title text-uppercase fw-bolder">project</h5>
+                            <p class="card-text">Dit onderdeel komt nog</p>
+                            <a href="homelab.html" class="btn btn-primary disabled">bekijken</a>    
                         </div>
                     </div>
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Wat heb ik geleerd?
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos architecto deleniti facilis, ipsum eos sint omnis modi enim distinctio.
-                            </div>
+                </article>
+                <article class="shop-item col-12 col-sm-6 col-md-4 mb-3">
+                    <div class="card border-dark">
+                        <img src="assets/images/electronica.webp" class="card-img-top" alt="...">
+                        <div class="card-body accent text-white">
+                            <h5 class="card-title text-uppercase fw-bolder">project</h5>
+                            <p class="card-text">Dit onderdeel komt nog</p>
+                            <a href="homelab.html" class="btn btn-primary disabled">bekijken</a>    
                         </div>
                     </div>
-                </div>
-            </fieldset>
+                </article>-->
+        </fieldset>
+      </main>
 
-        </section>
-    </main>
-    <aside class="mx-3 text-center">
-        <hr>
-        <h2 class="text-uppercase fs-5 fw-bolder pt-3">contact</h2>
-        <p>
-            vragen? stel ze op de <a href="contact.html">contact pagina</a><br>
-            <a href="mailto:samuel.mensah@student.ap.be">samuel.mensah@student.ap.be</a><br>
-            <a href="tel:+32 465 40 72 62">+32 465 40 72 62</a>
-        </p>
-        <ul class="list-inline socials">
-          <li class="list-inline-item socials">
-            <a href="https://www.instagram.com" target="_blank">
-              <i class="bi bi-instagram blauwgrijs"></i>
-            </a>
-          </li>
-          <li class="list-inline-item socials">
-            <a href="https://www.facebook.com" target="_blank">
-              <i class="bi bi-facebook fs-6 blauwgrijs"></i>
-            </a>
-          </li>
-        </ul>   
-    </aside>
-    <footer class="container-fluid text-center h6 small p-4">Samuel Mensah</footer>
+      <aside class="col-md-3 border-star py-4">
+        <div class="card border-dark">
+            <div class="card-body accent text-white">
+                <h1 class="card-title fw-bolder fs-4">HomeLab</h5>
+                <p class="card-text lh-1">29/03/2026</p>
+                <p class="text-white">
+                    Met dit project kan ik mijn eigen films en muziek streamen met jellyfin. En mijn bestanden zelf veilig oplsaan met een samba server.
+                    Ook stuur ik mijn smarthome er mee aan met homeassitant.
+                </p>  
+            </div>
+            </div>
+            
+            <hr>
+
+            <div class="card border-dark">
+            <div class="card-body accent text-white">
+                <h1 class="card-title fw-bolder fs-4">Vragen?</h5>
+                <p class="text-white">
+                    Stel al uw vragen via het contact formulier op de <a class="text-white" href="contact.html">contact pagina</a>.
+                </p>  
+            </div>
+            </div>
+        </aside>
+        </div>
+    </div>
+  <footer class="container-fluid accent text-center h6 small p-4 text-white">&copy;<span id="year"></span> Samuel Mensah</footer>
+</body>
 </body>
 </html>
