@@ -21,47 +21,52 @@
 </head>
 
 <body class="bg-dark">
-    <nav class="navbar p-2 navbar-expand-md container-fluid accent">
-        <a class="navbar-brand text-uppercase text-white fw-bolder" href="index.html">samuel&nbsp;mensah</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
-                <li><a class="nav-link text-white" href="#">Iets</a></li>
-                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle text-white active" href="portfolio.html" role="button" aria-current="page" data-bs-toggle="dropdown" aria-expanded="false">Portfolio</a>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><a class="dropdown-item text-white" href="project1.html">project1</a></li>
-                        <li><a class="dropdown-item text-white" href="project2.html">project2</a></li>
-                        <li><a class="dropdown-item text-white" href="project3.html">project3</a></li>
-                        <li><a class="dropdown-item text-white" href="project4.html">project4</a></li>
-                        <li><a class="dropdown-item text-white" href="project5.html">project5</a></li>
-                        <li><a class="dropdown-item text-white" href="project6.html">project6</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
-            </ul>
+    <nav class="navbar navbar-expand-md accent">
+        <div class="container-fluid">
+            <a class="navbar-brand text-uppercase text-white fw-bolder" href="index.html">samuel&nbsp;mensah</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="portfolio.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Portfolio</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item text-white" href="project1.html">homelab</a></li>
+                            <li><a class="dropdown-item text-white" href="project2.html">project2</a></li>
+                            <li><a class="dropdown-item text-white" href="project3.html">project3</a></li>
+                            <li><a class="dropdown-item text-white" href="project4.html">project4</a></li>
+                            <li><a class="dropdown-item text-white" href="project5.html">project5</a></li>
+                            <li><a class="dropdown-item text-white" href="project6.html">project6</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contact.html">contact</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
-    <header class="row">
     
+    <header>
+        <p class="text-white text-center col-md-9 pt-5">
+            Hieronder zijn wat projecten waar ik aan heb gewerkt.
+        </p>
     </header>
     
     <div class="container">
         <div class="row">
             <main class="col-md-9">
-                <fieldset class="row">
+                <fieldset class="row mb3">
                     <legend class="fw-bolder mt-5 text-center text-white">Projecten</legend>
-                    <hr class="mx-4 col-md-12 text-white">
+                    <hr class="text-white col-md-12">
                     <article class="shop-item col-12 col-sm-6 col-md-6 my-3 px-4">
                         <div class="card border-dark">
                             <img src="assets/images/electronica.webp" class="card-img-top" alt="...">
                             <div class="card-body accent text-white">
-                                <h5 class="card-title text-uppercase fw-bolder">project 1</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                <a href="project1.html" class="btn btn-primary">bekijken</a>    
+                                <h5 class="card-title text-uppercase fw-bolder">homelab</h5>
+                                <p class="card-text">Mijn eigen cloud, netflix, spotify en meer!</p>
+                                <a href="homelab.html" class="btn btn-primary">bekijken</a>    
                             </div>
                         </div>
                     </article>
@@ -70,9 +75,9 @@
                         <div class="card border-dark">
                             <img src="assets/images/electronica.webp" class="card-img-top" alt="...">
                             <div class="card-body accent text-white">
-                                <h5 class="card-title text-uppercase fw-bolder">project 2</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                <a href="project2.html" class="btn btn-primary">bekijken</a>    
+                                <h5 class="card-title text-uppercase fw-bolder">petamentor</h5>
+                                <p class="card-text">Van plastic fles naar 3d-printer matriaal.</p>
+                                <a href="petamentor.html" class="btn btn-primary">bekijken</a>    
                             </div>
                         </div>
                     </article>
@@ -122,10 +127,16 @@
                     </article>
                 </fieldset>
             </main>
-            <aside class="col-md-3 border-start ps-5">
+            <aside class="col-md-3 border-star ps-4">
+                <h2 class="text-uppercase fs-5 fw-bolder text-white mt-4">contact</h2>
+                <h2 class="text-white fs-5 fw-bold">Samuel&nbsp;Mensah</h2>
+                <p class="text-white">
+                    <a href="mailto:samuelsplatoon55@gmail.com" class="text-white">samuelsplatoon55@gmail.com</a><br>
+                    +32 465 40 72 62<br>Vragen? Stel ze op de <a class="te" href="contact.html">contact pagina</a>
+                    </p>
             </aside>
         </div>
-    </div>
+        </div>
         <footer class="container-fluid accent text-center h6 small p-4 text-white"><span id="year"></span> Samuel Mensah</footer>
     </body>
 </html>
